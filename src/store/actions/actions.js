@@ -9,7 +9,7 @@ import {
     DECREMENT,
     ADD_COUNTER,
     SUBTRACT_COUNTER,
-    STORE_RESULT,
+    INITIATE_STORE_RESULT,
     DELETE_RESULT
 } from '../constants/constants'
 
@@ -41,7 +41,7 @@ export const subtract = (value) => {
 
 export const storeResult = (value) => {
     return {
-        type: STORE_RESULT,
+        type: INITIATE_STORE_RESULT,
         result: value
     }
 }
