@@ -10,7 +10,7 @@ import {
     ADD_COUNTER,
     SUBTRACT_COUNTER,
     INITIATE_STORE_RESULT,
-    DELETE_RESULT
+    INITIATE_DELETE_RESULT
 } from '../constants/constants'
 
 export const increment = () => {
@@ -46,9 +46,10 @@ export const storeResult = (value) => {
     }
 }
 
-export const deleteResult = (id) => {
+export const deleteResult = (results, id) => {
     return {
-        type: DELETE_RESULT,
+        type: INITIATE_DELETE_RESULT,
+        results: results,
         resultElId: id
     }
 }

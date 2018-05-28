@@ -8,13 +8,12 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import counterReducer from './store/reducers/counter'
-import resultReducer from './store/reducers/result'
 import { rootSaga } from './store/sagas/sagas'
 
 
 const rootReducer = combineReducers({
     ctr: counterReducer,
-    res: resultReducer
+    res: require('./redux/ResultRedux').reducer
 })
 
 const logger = store => {
